@@ -6,7 +6,6 @@ public class Operation {
     private String operator;
     private double result;
 
-    // Needed for JSON (Jackson)
     public Operation() {}
 
     public Operation(double numOne, double numTwo, String operator, double result) {
