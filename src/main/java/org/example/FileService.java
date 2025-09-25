@@ -39,7 +39,8 @@ class FileService {
                 System.err.println("Output file not found to parse: " + path.toAbsolutePath());
                 return List.of();
             }
-            return mapper.readValue(path.toFile(), new TypeReference<List<Operation>>() {});
+            return mapper.readValue(path.toFile(), new TypeReference<>() {
+            });
         } catch (IOException e) {
             System.err.println("Failed to parse JSON: " + e.getMessage());
             return List.of();
